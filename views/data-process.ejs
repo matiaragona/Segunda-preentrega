@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WebSocket</title>
+        <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container mt-3">
+            <div class="estilo d-flex flex-column justify-content-between p-3">
+                <h3 style="text-align: center">
+                    <i>Info desde variable de entorno</i>
+                    <button class="btn btn-primary" onclick="location.href='/datos'">
+                        Volver a home
+                    </button>
+                </h3>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h4>Argumentos de entrada:</h4>
+                    <p><%-argumentos-%></p>
+
+                    <h4>Nombre de la plataforma (sistema operativo):</h4>
+                    <p><%-plataforma-%></p>
+
+                    <h4>Version de Node:</h4>
+                    <p><%-version-%></p>
+
+                    <h4>Memoria total reservada (rss):</h4>
+                    <p><%-memoria-%></p>
+
+                    <h4>Path de ejecucion:</h4>
+                    <p><%-path-%></p>
+
+                    <h4>Proceso ID:</h4>
+                    <p><%-id-%></p>
+
+                    <h4>Carpeta del proyecto:</h4>
+                    <p><%-carpeta-%></p>
+
+                    <h4>Número de procesadores en el servidor:</h4>
+                    <p><%-cpus-%></p>
+            </div>
+        </div>
+
+        
+    </body>
+</html>
